@@ -12,16 +12,16 @@ export default function App() {
         notes.find(note => note.id === currentNoteId) 
         || notes[0]
 
-        const sortedNotes = notes.sort((a, b) => b.updatedAt - a.updatedAt)
-        React.useEffect(() => {
-        const unsub = onSnapshot(notesCollection , (snapshot) => {
-            const notesArr = snapshot.docs.map(doc => ({
-                ...doc.data(),
-                id: doc.id
-            }))
-            setNotes(notesArr);
-        })
-        return unsub
+    const sortedNotes = notes.sort((a, b) => b.updatedAt - a.updatedAt)
+    React.useEffect(() => {
+    const unsub = onSnapshot(notesCollection , (snapshot) => {
+        const notesArr = snapshot.docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id
+        }))
+        setNotes(notesArr);
+    })
+    return unsub
     }, [])
 
     React.useEffect(() => {
