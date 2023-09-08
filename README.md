@@ -1,8 +1,10 @@
 # Notes App
 
-Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename `.js` files to `.jsx` :)
+[Click here](https://abhishekr14.github.io/Notes-App/) to view the Notes Application
 
-Quick start:
+OR
+
+Quick start on your local:
 
 ```
 $ npm install
